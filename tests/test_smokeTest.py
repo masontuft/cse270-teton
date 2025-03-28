@@ -82,6 +82,7 @@ class TestSmokeTest():
     self.driver.find_element(By.ID, "password").click()
     self.driver.find_element(By.ID, "password").send_keys("fhdksjs")
     self.driver.find_element(By.CSS_SELECTOR, ".mysubmit:nth-child(4)").click()
+    time.sleep(1)
     self.driver.find_element(By.CSS_SELECTOR, "form > div").click()
     elements = self.driver.find_elements(By.CSS_SELECTOR, ".errorMessage")
     assert len(elements) > 0
